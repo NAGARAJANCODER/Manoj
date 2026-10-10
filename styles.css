@@ -26,6 +26,9 @@
 .tnmwa-links{width:min(90%,1400px);max-width:1400px;padding:13px 24px}.tnmwa-links a{min-height:62px;font-size:12px}
 @media(max-width:700px){.tnmwa-links{width:94%;padding:8px}.tnmwa-links a{min-height:54px;font-size:8px}}
 
+.association-logo{display:block;width:48px;height:48px;object-fit:contain;flex:0 0 48px}
+@media(max-width:700px){.association-logo{width:40px;height:40px;flex-basis:40px}}
+
 /* Make the homepage copy readable and align the story panels with the main sections. */
 .home-stories{padding-top:4px;padding-bottom:12px}
 .home-stories .about-story{width:100%;max-width:none}
@@ -62,4 +65,29 @@
   .tnmwa-header+main .hero h1{font-size:clamp(32px,8.5vw,48px);line-height:1.06}
   .tnmwa-header+main .hero-copy p{font-size:15px;line-height:1.45;max-width:100%}
   .tnmwa-header+main .hero-buttons a{font-size:12px;padding:11px 16px}
+}
+
+/* Improve readability in the reviews, news cards, and footer. */
+.review-card p{font-size:14px;line-height:1.55}
+.google-heading>span:nth-child(2){font-size:12px}
+.google-heading strong{font-size:17px}
+.reviewer b{font-size:12px}
+.review-stars{font-size:14px}
+.news-card time{font-size:11px}
+.news-card h3{font-size:17px;line-height:1.2}
+.news-card p{font-size:13px;line-height:1.5}
+.news-card>div>a{font-size:12px}
+.news-section .section-title h2{font-size:32px}
+.news-section .view-link{font-size:11px}
+.site-footer p,.site-footer nav a,.site-footer .copyright{font-size:13px;line-height:1.6}
+.footer-brand strong{font-size:13px}
+@media(max-width:700px){
+  .review-card p{font-size:13px}
+  .reviewer b{font-size:12px}
+  .news-card h3{font-size:16px}
+  .news-card p{font-size:12px}
+  .news-card time,.news-card>div>a{font-size:11px}
+  .news-section .section-title h2{font-size:26px}
+  .site-footer p,.site-footer nav a,.site-footer .copyright{font-size:12px}
+  .footer-brand strong{font-size:11px}
 }
