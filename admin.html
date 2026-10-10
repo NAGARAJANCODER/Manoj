@@ -1,37 +1,84 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f4f6f7"><title>Ride Admin | TNMWA</title>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f6f7">
+  <title>Ride Admin | TNMWA</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="admin-page">
-  <header class="admin-header"><a class="admin-brand" href="index.html"><span class="association-seal">TNMWA</span><span><b>TNMWA</b><small>RIDE ADMIN</small></span></a><a class="admin-back" href="index.html">← Back to website</a></header>
+  <header class="admin-header"><a class="admin-brand" href="index.html"><span
+        class="association-seal">TNMWA</span><span><b>TNMWA</b><small>RIDE ADMIN</small></span></a><a class="admin-back"
+      href="index.html">← Back to website</a></header>
   <main class="admin-main">
-    <div class="admin-heading"><div><span class="about-eyebrow">CONTENT MANAGER</span><h1>Upcoming rides</h1><p>Add a new ride or update the details shown on your home page.</p></div><button class="admin-primary" id="new-ride" type="button">＋ Add ride</button></div>
-    <div class="admin-notice" id="admin-notice" role="status" aria-live="polite">Changes are saved in this browser and appear on the home page.</div>
+    <div class="admin-heading">
+      <div><span class="about-eyebrow">CONTENT MANAGER</span>
+        <h1>Upcoming rides</h1>
+        <p>Add a new ride or update the details shown on your home page.</p>
+      </div><button class="admin-primary" id="new-ride" type="button">＋ Add ride</button>
+    </div>
+    <div class="admin-notice" id="admin-notice" role="status" aria-live="polite">Changes are saved in this browser and
+      appear on the home page.</div>
     <div class="admin-layout">
-      <section class="admin-panel editor-panel"><div class="panel-heading"><div><h2 id="form-title">Add a ride</h2><p>Fill in the ride details below.</p></div><span class="admin-step">RIDE DETAILS</span></div>
+      <section class="admin-panel editor-panel">
+        <div class="panel-heading">
+          <div>
+            <h2 id="form-title">Add a ride</h2>
+            <p>Fill in the ride details below.</p>
+          </div><span class="admin-step">RIDE DETAILS</span>
+        </div>
         <form id="ride-form">
           <input type="hidden" id="ride-id">
           <input type="hidden" id="ride-bucket" value="upcoming">
-          <label class="admin-field full-field">Ride title<input id="ride-title" name="title" required maxlength="70" placeholder="Example: VARKALA BIKE RIDE"></label>
-          <div class="field-row"><label class="admin-field">Start date<input id="ride-start" name="startDate" required type="date"></label><label class="admin-field">End date <small>(optional)</small><input id="ride-end" name="endDate" type="date"></label></div>
-          <label class="admin-field full-field">Ride type<input id="ride-type" name="type" required maxlength="45" placeholder="Example: 2 Days | Group Ride"></label>
-          <label class="admin-field full-field">Route / location<input id="ride-route" name="route" required maxlength="70" placeholder="Example: Coimbatore to Varkala"></label>
-          <label class="admin-field full-field">Short details<input id="ride-details" name="details" required maxlength="90" placeholder="Example: Beaches · Campfire · Stay"></label>
-          <label class="admin-field full-field">Photo URL <small>(optional if you upload a photo)</small><input id="ride-image" name="image" type="text" placeholder="Paste a web image URL"></label>
-          <label class="admin-field full-field">Or upload from your device<input id="ride-file" name="imageFile" type="file" accept="image/*"><small id="upload-status">Photos are resized before saving in this browser.</small></label>
-          <label class="admin-field full-field">Photo description<input id="ride-alt" name="alt" maxlength="100" placeholder="A short description for the ride image"></label>
-          <div class="image-preview-wrap"><img id="image-preview" alt="Ride image preview"><span id="preview-placeholder">Image preview</span></div>
-          <div class="form-actions"><button class="admin-primary" type="submit" id="save-ride">Save ride</button><button class="admin-secondary" type="button" id="cancel-edit" hidden>Cancel</button></div>
+          <label class="admin-field full-field">Ride title<input id="ride-title" name="title" required maxlength="70"
+              placeholder="Example: VARKALA BIKE RIDE"></label>
+          <div class="field-row"><label class="admin-field">Start date<input id="ride-start" name="startDate" required
+                type="date"></label><label class="admin-field">End date <small>(optional)</small><input id="ride-end"
+                name="endDate" type="date"></label></div>
+          <label class="admin-field full-field">Ride type<input id="ride-type" name="type" required maxlength="45"
+              placeholder="Example: 2 Days | Group Ride"></label>
+          <label class="admin-field full-field">Route / location<input id="ride-route" name="route" required
+              maxlength="70" placeholder="Example: Coimbatore to Varkala"></label>
+          <label class="admin-field full-field">Short details<input id="ride-details" name="details" required
+              maxlength="90" placeholder="Example: Beaches · Campfire · Stay"></label>
+          <label class="admin-field full-field">Photo URL <small>(optional if you upload a photo)</small><input
+              id="ride-image" name="image" type="text" placeholder="Paste a web image URL"></label>
+          <label class="admin-field full-field">Or upload from your device<input id="ride-file" name="imageFile"
+              type="file" accept="image/*"><small id="upload-status">Photos are resized before saving in this
+              browser.</small></label>
+          <label class="admin-field full-field">Photo description<input id="ride-alt" name="alt" maxlength="100"
+              placeholder="A short description for the ride image"></label>
+          <div class="image-preview-wrap"><img id="image-preview" alt="Ride image preview"><span
+              id="preview-placeholder">Image preview</span></div>
+          <div class="form-actions"><button class="admin-primary" type="submit" id="save-ride">Save ride</button><button
+              class="admin-secondary" type="button" id="cancel-edit" hidden>Cancel</button></div>
         </form>
       </section>
-      <section class="admin-panel ride-manager"><div class="panel-heading"><div><h2>Upcoming rides</h2><p><span id="ride-count">0</span> rides on the home page</p></div><button class="reset-rides" id="restore-rides" type="button">Restore samples</button></div><div id="admin-ride-list" class="admin-ride-list"></div><div class="completed-admin-heading"><h3>Completed rides</h3><span>Rides move here after their end date</span></div><div id="admin-completed-list" class="admin-ride-list"></div></section>
+      <section class="admin-panel ride-manager">
+        <div class="panel-heading">
+          <div>
+            <h2>Upcoming rides</h2>
+            <p><span id="ride-count">0</span> rides on the home page</p>
+          </div><button class="reset-rides" id="restore-rides" type="button">Restore samples</button>
+        </div>
+        <div id="admin-ride-list" class="admin-ride-list"></div>
+        <div class="completed-admin-heading">
+          <h3>Completed rides</h3><span>Rides move here after their end date</span>
+        </div>
+        <div id="admin-completed-list" class="admin-ride-list"></div>
+      </section>
     </div>
-    <p class="admin-footnote">This page stores ride information in this browser’s local storage. It has no sign-in protection or shared server database.</p>
+    <p class="admin-footnote">This page stores ride information in this browser’s local storage. It has no sign-in
+      protection or shared server database.</p>
   </main>
-  <script src="rides-data.js"></script><script src="admin.js"></script>
+  <script src="rides-data.js"></script>
+  <script src="admin.js"></script>
 </body>
+
 </html>
